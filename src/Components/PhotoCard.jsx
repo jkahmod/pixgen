@@ -15,7 +15,7 @@ const PhotoCard = ({photo}) => {
                      className="rounded-xl"   />
                      <Chip className="absolute right-2 top-2">{photo.category}</Chip>
                 </div>
-                <h1 className="text-xl font-semibold ">
+                <h1 className="text-lg font-semibold ">
                     {photo.title}
                 </h1>
                 <div className="flex justify-between">
@@ -28,7 +28,7 @@ const PhotoCard = ({photo}) => {
                     </span>
                 </div>
 
-      <Button variant="outline" className='w-full'>View </Button>
+      <Button variant="outline" className='w-full'>view details  </Button>
 
                     
             </div>
