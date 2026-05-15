@@ -1,16 +1,18 @@
 import { Button, Card, Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaHeart } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 
 const PhotoCard = ({photo}) => {
     return (
         <div>
-            <Card className="border">
+            <Card className="border border-gray-400">
             <div className="space-y-3" key={photo.id}>
                 <div className="relative w-full aspect-square">
                     <Image src={photo.imageUrl}
                      fill 
+                       sizes="(max-width: 768px) 100vw, 50vw"
                      alt={photo.title}
                      className="rounded-xl"   />
                      <Chip className="absolute right-2 top-2">{photo.category}</Chip>
@@ -28,8 +30,8 @@ const PhotoCard = ({photo}) => {
                     </span>
                 </div>
 
-      <Button variant="outline" className='w-full'>view details  </Button>
-
+      <Link href={`/all-photos/${photo.id}`}><Button variant="outline" className='w-full'>view details  </Button>
+        </Link>
                     
             </div>
             </Card>

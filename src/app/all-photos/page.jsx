@@ -5,7 +5,6 @@ const AllPhotosPage = async () => {
     const res = await fetch("https://pixgen-pied.vercel.app/data.json");
 
     const photos = await res.json();
-    console.log(photos)
     return (
         <div className="w-[1400px] mx-auto ">
             <h1 className="text-2xl text-center font-bold py-10 capitalize ">all-photos</h1>
